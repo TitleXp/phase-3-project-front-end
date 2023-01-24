@@ -11,8 +11,8 @@ const FarmCard = ({ id, name, location, rating, products }) => { // this works
         <>
             <div className="farms-box">
             <h3 className="farm-name">{name}</h3>
-                <p className="farm-location">{location}</p>
-                <p className="farm-rating">{rating}</p>
+                <p className="farm-location">Location: {location}</p>
+                <p className="farm-rating">Rating: {rating}</p>
 
 
                 {/* doesn't work yet */}
