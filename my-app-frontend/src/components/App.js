@@ -1,15 +1,52 @@
-
 import React from 'react';
-import FarmCard from './components/FarmCard';
-import './App.css';
+import '../App.css';
+// import { BrowserRouter as Router} from "react-router-dom"
+import { Route, Switch } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+
+import Header from './Header';
+import FarmContainer from './FarmContainer';
+import ProductContainer from './ProductContainer';
+import Cart from './Cart';
+
 
 
 function App() {
+
+  const [farms, setFarms]=useState([])
+
+  useEffect(() => { // fetch farms
+    const fetchFarms = async () => {
+      try {
+        const resp = await fetch("http://localhost:9292/farms")
+        const data = await resp.json()
+        setFarms(data)
+      } catch (error) {
+        alert(error)
+      }
+    }
+    fetchFarms()
+  }, [])
+
   return (
     <div className="App">
-      <Routes>
+      {/* <Router>
         <Route path="/farms" element={<FarmCard/>} />
-      </Routes>
+      </Router> */}
+
+      <Header/>
+        <Switch>
+
+          <Route path="/farms">
+              <FarmContainer farms={farms} setFarms={setFarms}/>
+          </Route>
+
+
+
+
+        </Switch>
+
     </div>
   );
 }

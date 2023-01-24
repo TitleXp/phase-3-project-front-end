@@ -1,15 +1,16 @@
 import React from 'react';
+import FarmCard from './FarmCard';
 
-const FarmContainer = ({ id, name, location, rating }) => {
+const FarmContainer = ({farms, setFarms}) => {
+
+    const mappedFarms = farms.map(farm => (
+        <FarmCard {...farm} key={farm.id} setFarms={setFarms} />
+    ))
 
     return (
-    <>
-        <div className="farms-box">
-            <h3 className="farm-name">{name}</h3>
-            <p className="farm-location">{location}</p>
-            <p className="farm-rating">- {rating}</p>
+        <div>
+            {mappedFarms}
         </div>
-    </>
     )
 }
 
