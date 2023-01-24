@@ -4,7 +4,7 @@ import FarmCard from './FarmCard';
 const FarmContainer = ({farms, setFarms, products, setProducts}) => {
 
     const mappedFarms = farms.map(farm => (
-        <FarmCard {...farm} key={farm.id} setFarms={setFarms} />
+        <FarmCard {...farm} key={farm.id} setFarms={setFarms} products={products} />
     ))
 
     const mappedProducts = products.map(product => (
