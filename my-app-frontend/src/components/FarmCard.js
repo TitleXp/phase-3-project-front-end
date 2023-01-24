@@ -1,7 +1,8 @@
 import React from 'react';
 // import { useState, useEffect } from "react"
 
-const FarmCard = ({ id, name, location, rating }) => {
+const FarmCard = ({ id, name, location, rating, products }) => { // this works
+// const FarmCard = ({ farm, product }) => { //doesn't work yet
 
 
 
@@ -9,10 +10,22 @@ const FarmCard = ({ id, name, location, rating }) => {
     return (
         <>
             <div className="farms-box">
-                <h3 className="farm-name">{name}</h3>
+            <h3 className="farm-name">{name}</h3>
                 <p className="farm-location">{location}</p>
-                <p className="farm-rating">- {rating}</p>
-            </div>
+                <p className="farm-rating">{rating}</p>
+
+
+                {/* doesn't work yet */}
+                {/* <h3 className="farm-name">{farm.name}</h3> 
+                <p className="farm-location">{farm.location}</p>
+                <p className="farm-rating">{farm.rating}</p> */}
+                {/* <h3>{products.name}</h3> */}
+                {/* <p>{category}</p>
+                <p>{description}</p>
+                <p>{picture_link}</p>
+                <p>{price}</p>
+                <p>{stock}</p> */}
+                </div>
         </>
         )
     }
