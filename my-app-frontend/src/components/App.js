@@ -15,6 +15,7 @@ import Cart from './Cart';
 function App() {
 
   const [farms, setFarms]=useState([])
+  const [products, setProducts]=useState([])
 
   useEffect(() => { // fetch farms
     const fetchFarms = async () => {
@@ -29,6 +30,19 @@ function App() {
     fetchFarms()
   }, [])
 
+  useEffect(() => { // fetch products
+    const fetchProducts = async () => {
+      try {
+        const resp = await fetch("http://localhost:9292/products")
+        const data = await resp.json()
+        setProducts(data)
+      } catch (error) {
+        alert(error)
+      }
+    }
+    fetchProducts()
+  }, [])
+
   return (
     <div className="App">
       {/* <Router>
@@ -39,7 +53,11 @@ function App() {
         <Switch>
 
           <Route path="/farms">
-              <FarmContainer farms={farms} setFarms={setFarms}/>
+              <FarmContainer farms={farms} setFarms={setFarms}  products={products} setProducts={setProducts}/>
+          </Route>
+
+          <Route path="/products">
+              <ProductContainer products={products} setProducts={setProducts}/>
           </Route>
 
 
