@@ -6,16 +6,17 @@ import { useState, useEffect } from 'react';
 
 
 import Header from './Header';
+import Navbar from './Navbar';
 import FarmContainer from './FarmContainer';
 import ProductContainer from './ProductContainer';
-import Cart from './Cart';
+// import Cart from './Cart';
 
 
 
 function App() {
 
   const [farms, setFarms]=useState([])
-  const [products, setProducts]=useState([])
+  // const [products, setProducts]=useState([])
 
   useEffect(() => { // fetch farms
     const fetchFarms = async () => {
@@ -31,28 +32,27 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      {/* <Router>
-        <Route path="/farms" element={<FarmCard/>} />
-      </Router> */}
 
-      <Header/>
-        <Switch>
+    <><Navbar />
+      <div className="App">
+        {/* <Router>
+          <Route path="/farms" element={<FarmCard/>} />
+        </Router> */}
 
-          <Route path="/farms">
-              <FarmContainer farms={farms} setFarms={setFarms} />
-          </Route>
+        <Header/>
+          <Switch>
+        
+            <Route path="/farms">
+                <FarmContainer farms={farms} setFarms={setFarms} />
+            </Route>
 
-          <Route path="/products">
-              <ProductContainer />
-          </Route>
+            <Route path="/products">
+                <ProductContainer />
+            </Route>
 
-
-
-
-        </Switch>
-
-    </div>
+          </Switch>
+      </div>
+    </>
   );
 }
 
