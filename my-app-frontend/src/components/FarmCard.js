@@ -1,9 +1,11 @@
 import React from 'react';
+import ProductCard from './ProductCard'
+
 // import { useState, useEffect } from "react"
 
 const FarmCard = ({ id, name, location, rating, products }) => { // this works
 // const FarmCard = ({ farm, product }) => { //doesn't work yet
-
+const mappedProducts = products.map(product => <ProductCard key={product.id} {...product} />)
 
 
 
@@ -11,9 +13,10 @@ const FarmCard = ({ id, name, location, rating, products }) => { // this works
         <>
             <div className="farms-box">
             <h3 className="farm-name">{name}</h3>
-                <p className="farm-location">{location}</p>
-                <p className="farm-rating">{rating}</p>
+                <p className="farm-location">Location: {location}</p>
+                <p className="farm-rating">Rating: {rating}</p>
 
+                {mappedProducts}
 
                 {/* doesn't work yet */}
                 {/* <h3 className="farm-name">{farm.name}</h3> 

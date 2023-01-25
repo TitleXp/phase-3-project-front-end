@@ -4,18 +4,21 @@ import FarmCard from './FarmCard';
 const FarmContainer = ({farms, setFarms, products, setProducts}) => {
 
     const mappedFarms = farms.map(farm => (
-        <FarmCard {...farm} key={farm.id} setFarms={setFarms} products={products} />
+        <FarmCard {...farm} key={farm.id} setFarms={setFarms} />
     ))
 
-    const mappedProducts = products.map(product => (
-        <FarmCard {...product} key={product.id} setProducts={setProducts} />
-    ))
+    // const mappedProducts = products.map(product => (
+    //     <FarmCard {...product} key={product.id} setProducts={setProducts} />
+    // ))
 
     return (
-        <div>Farm Container
-            {mappedFarms}
-            {mappedProducts}
-        </div>
+        <div>
+            <h2 className="farm-header"> Discover Our Farms</h2>
+                <div> 
+                    {mappedFarms}
+                    {/* {mappedProducts} */}
+                </div>
+        </div>        
     )
 }
 
