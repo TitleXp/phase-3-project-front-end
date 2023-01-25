@@ -13,9 +13,10 @@ const mappedProducts = products.map(product => <ProductCard key={product.id} {..
         <>
             <div className="farms-box">
             <h3 className="farm-name">{name}</h3>
+                <div className="farm-box">
                 <p className="farm-location">Location: {location}</p>
                 <p className="farm-rating">Rating: {rating}</p>
-
+                </div>
                 {mappedProducts}
 
                 {/* doesn't work yet */}

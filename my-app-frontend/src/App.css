@@ -43,10 +43,27 @@
   background-color: rgba(146, 183, 132, 0.433);
 }
 
+.nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0.5rem;
+  position: top;
+}
+
+.nav-link {
+  color: white;
+  font-size: 24px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  
+
 .farm-header {
-  padding: 0.5em;
-  font-size: 4.0em;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-size: 5.0em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .farms-box {
@@ -66,18 +83,69 @@
 
 .farm-name {
   padding: 0.0em;
-  font-size: 2.5em;
+  font-size: 3.5em;
+  font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .farm-location {
   padding: 0.0em;
-  font-size: 1.5em;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .farm-rating {
   padding: 0.0em;
-  font-size: 1.5em;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-weight: bold;
+  font-size: 2em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.products-header {
+  font-size: 5.0em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* .products-box {
+  border-top: 3px solid;
+  color: black;
+} */
+
+.products-name {
+  padding: 0.0em;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.products-category {
+  padding: 0.0em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.products-description {
+  padding: 0.0em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.products-price {
+  padding: 0.0em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.products-stock {
+  padding: 0.0em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
