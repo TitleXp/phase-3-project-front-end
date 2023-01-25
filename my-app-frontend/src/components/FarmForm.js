@@ -25,7 +25,7 @@ const FarmForm = ({ setFarms }) => {
                 body: JSON.stringify(newFarm)
             })
             .then(response => response.json())
-            .then(newFarm => setFarms(currentVal => [newFarm, ...currentVal]))
+            .then(newF => setFarms(currentVal => [newF, ...currentVal]))
             .catch(error => alert(error))
             setNewFarm({
                 name: "",
