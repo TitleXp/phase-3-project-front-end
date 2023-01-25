@@ -27,10 +27,25 @@ const ProductContainer = () => {
 
 
     return(
-        <div>Product Container
-            {mappedProducts}
+        <div className="product-box">
+          <h1 className="products-header">Fresh From The Farm</h1>
+            <div className="products-container">
+            </div>
+            <div> {mappedProducts}
+            </div>
         </div>
     )
 }; 
+
+
+// return (
+//   <>
+//       <div className="farms-box">
+//       <h3 className="farm-name">{name}</h3>
+//           <div className="farm-box">
+//           <p className="farm-location">Location: {location}</p>
+//           <p className="farm-rating">Rating: {rating}</p>
+//           </div>
+//           {mappedProducts}
 
 export default ProductContainer;
