@@ -9,6 +9,8 @@ import Header from './Header';
 import Navbar from './Navbar';
 import FarmContainer from './FarmContainer';
 import ProductContainer from './ProductContainer';
+import FarmForm from './FarmForm';
+import ReviewContainer from './ReviewContainer';
 // import Cart from './Cart';
 
 
@@ -48,6 +50,16 @@ function App() {
 
             <Route path="/products">
                 <ProductContainer />
+            </Route>
+
+            <Route path="/newfarm">
+                <FarmForm setFarms={setFarms}/>
+
+            </Route>
+
+            <Route path="/reviews">
+                <ReviewContainer />
+                
             </Route>
 
           </Switch>

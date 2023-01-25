@@ -19,16 +19,6 @@ const mappedProducts = products.map(product => <ProductCard key={product.id} {..
                 </div>
                 {mappedProducts}
 
-                {/* doesn't work yet */}
-                {/* <h3 className="farm-name">{farm.name}</h3> 
-                <p className="farm-location">{farm.location}</p>
-                <p className="farm-rating">{farm.rating}</p> */}
-                {/* <h3>{products.name}</h3> */}
-                {/* <p>{category}</p>
-                <p>{description}</p>
-                <p>{picture_link}</p>
-                <p>{price}</p>
-                <p>{stock}</p> */}
                 </div>
         </>
         )
