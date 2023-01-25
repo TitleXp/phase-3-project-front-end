@@ -20,7 +20,7 @@ function App() {
   useEffect(() => { // fetch farms
     const fetchFarms = async () => {
       try {
-        const resp = await fetch("http://localhost:9292/farms")
+        const resp = await fetch("http://localhost:9292/farms?order=rating")
         const data = await resp.json()
         setFarms(data)
       } catch (error) {
@@ -28,19 +28,6 @@ function App() {
       }
     }
     fetchFarms()
-  }, [])
-
-  useEffect(() => { // fetch products
-    const fetchProducts = async () => {
-      try {
-        const resp = await fetch("http://localhost:9292/products")
-        const data = await resp.json()
-        setProducts(data)
-      } catch (error) {
-        alert(error)
-      }
-    }
-    fetchProducts()
   }, [])
 
   return (
@@ -53,11 +40,11 @@ function App() {
         <Switch>
 
           <Route path="/farms">
-              <FarmContainer farms={farms} setFarms={setFarms}  products={products} setProducts={setProducts}/>
+              <FarmContainer farms={farms} setFarms={setFarms} />
           </Route>
 
           <Route path="/products">
-              <ProductContainer products={products} setProducts={setProducts}/>
+              <ProductContainer />
           </Route>
 
 
