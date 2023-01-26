@@ -50,20 +50,21 @@ const FarmForm = ({ setFarms, setMessage }) => {
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
+                <h2 className="form-title">Create Your New Farm</h2>
                 <div>
-                    <input type="text" name="name" placeholder='Name' onChange={handleChange} value={newFarm.name} required/>
+                    <input className="user-input" type="text" name="name" placeholder='Name:' onChange={handleChange} value={newFarm.name} required/>
                 </div>
 
                 <div>
-                    <input type="text" name="location" placeholder='location' onChange={handleChange} value={newFarm.location} required/>
+                    <input className="user-input" type="text" name="location" placeholder='Location:' onChange={handleChange} value={newFarm.location} required/>
                 </div>
 
                 <div>
-                    <input type="number" name="rating" placeholder='Rating' onChange={handleChange} value={newFarm.rating} required/>
+                    <input className="user-input" type="number" name="rating" placeholder='Rating:' onChange={handleChange} value={newFarm.rating} required/>
                 </div>
 
-                <input type="submit" value="Create new Farm" />
+                <input className="submit-btn" type="submit" value="Create New Farm" />
                 
             </form>
         </div>

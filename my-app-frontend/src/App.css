@@ -59,7 +59,81 @@
   font-size: 24px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-  
+
+
+
+.bg {
+  background-image: url("https://i.imgur.com/2rS7Kor.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-page {
+  background-image: url("https://i.imgur.com/2rS7Kor.jpg");
+  width: 100%;
+  height: 20%;
+  background-size: cover;
+}
+
+.site-title {
+  padding: 1.5em;
+  display:relative;
+  text-align: center;
+  color: black;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.site-description {
+  padding-bottom: 5em;
+  display: relative;
+  color: whitesmoke;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+
+.form {
+  width: 100%;
+  height: 20%;
+  background-size: cover;
+  background-image: url("https://i.imgur.com/fL9IQIk.jpg");
+  color: black;
+}
+
+.form-title {
+  padding-top: 1em;
+  color: whitesmoke;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.submit-btn {
+  padding: 0.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.user-input {
+  color: black;
+  font-family: Optima, sans-serif;
+  font-weight: bold; 
+  font-size: 1em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 30%;
+  height: 0%;
+  box-sizing: border-box;  
+}
+
+
 
 .farm-header {
   font-size: 5.0em;
