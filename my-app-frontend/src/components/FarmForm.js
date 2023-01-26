@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 
-const FarmForm = ({ setFarms }) => {
+const FarmForm = ({ setFarms, setMessage }) => {
 
 
     const [newFarm, setNewFarm] = useState({
         name: "",
         location: "",
-        raiting: ""
+        rating: ""
 
     })
 
@@ -24,8 +24,22 @@ const FarmForm = ({ setFarms }) => {
                 },
                 body: JSON.stringify(newFarm)
             })
-            .then(response => response.json())
-            .then(newF => setFarms(currentVal => [newF, ...currentVal]))
+            .then(response => {
+                if(response.status===201){
+                    response.json()
+                    .then(newFarmObj => {
+                        setFarms(currentVal => [newFarmObj.farm, ...currentVal])
+                        setMessage("Farm created!")
+                    } )
+                
+                } else {
+                    response.json()
+                    .then(messageObj => setMessage(messageObj.message))
+                }
+               
+                
+            })
+           
             .catch(error => alert(error))
             setNewFarm({
                 name: "",
