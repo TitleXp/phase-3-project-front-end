@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductCard from './ProductCard'
+import { Link } from 'react-router-dom';
 
 // import { useState, useEffect } from "react"
 
@@ -12,12 +13,12 @@ const mappedProducts = products.map(product => <ProductCard key={product.id} {..
     return (
         <>
             <div className="farms-box">
-            <h3 className="farm-name">{name}</h3>
+            <Link className="farm-name" to="/farm/id">{name}</Link>
                 <div className="farm-box">
                 <p className="farm-location">Location: {location}</p>
                 <p className="farm-rating">Rating: {rating}</p>
                 </div>
-                {mappedProducts}
+                {/* {mappedProducts} */}
 
                 </div>
         </>
