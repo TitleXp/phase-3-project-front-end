@@ -13,6 +13,7 @@ import FarmForm from './FarmForm';
 import ReviewContainer from './ReviewContainer';
 // import Cart from './Cart';
 import Notification from './Notification';
+import ReviewForm from './ReviewForm';
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
   const [farms, setFarms]=useState([])
   const [message, setMessage]= useState("")
+  // const [reviews, setReviews]= useState([])
   // const [products, setProducts]=useState([])
 
   useEffect(() => { // fetch farms
@@ -50,7 +52,16 @@ function App() {
                 <FarmContainer farms={farms} setFarms={setFarms} />
             </Route>
 
-            <Route exact path="/fruits">
+            <Route path="/farms/id">
+                <ProductContainer />
+              
+            </Route>
+
+            <Route exact path="/fruits"> {/* not working yet */}
+                <ProductContainer />
+            </Route>
+
+            <Route exact path="/vegetables"> {/* not working yet */}
                 <ProductContainer />
             </Route>
 
@@ -64,6 +75,7 @@ function App() {
             </Route>
 
             <Route path="/reviews">
+                <ReviewForm setMessage={setMessage} />
                 <ReviewContainer />
                 
             </Route>

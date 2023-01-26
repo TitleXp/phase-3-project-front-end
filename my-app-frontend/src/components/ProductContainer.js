@@ -32,6 +32,7 @@ const ProductContainer = () => {
             <div className="products-container">
             </div>
             <div> {mappedProducts}
+            
             </div>
         </div>
     )

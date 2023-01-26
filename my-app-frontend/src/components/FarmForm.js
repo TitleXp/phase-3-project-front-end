@@ -28,7 +28,7 @@ const FarmForm = ({ setFarms, setMessage }) => {
                 if(response.status===201){
                     response.json()
                     .then(newFarmObj => {
-                        setFarms(currentVal => [newFarmObj.farm, ...currentVal])
+                        setFarms(currentVal => [newFarmObj.farm,currentVal])
                         setMessage("Farm created!")
                     } )
                 
