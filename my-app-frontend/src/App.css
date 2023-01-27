@@ -67,8 +67,6 @@
   color: grey;
 }
 
-
-
 .bg {
   background-image: url("https://i.imgur.com/2rS7Kor.jpg");
   height: 100%;
@@ -84,21 +82,37 @@
   background-size: cover;
 }
 
+/* .logo {
+  background-image: url("https://i.imgur.com/gGeWdFC.png");
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
 .site-title {
-  padding: 1.5em;
+  /* padding: 1.5em; */
   display:relative;
   text-align: center;
   color: black;
-  font-size: 4em;
+  font-size: 5.5em;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .site-description {
-  padding-bottom: 5em;
+  padding-top: 5em;
   display: relative;
   color: whitesmoke;
-  font-size: 2.5em;
+  font-size: 3.5em;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.header {
+  height: 100vh;
+}
+
+.sub-header {
+  font-size: 2.0em;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
@@ -114,7 +128,7 @@
 
 .form-title {
   padding-top: 1em;
-  color: whitesmoke;
+  color: white;
   font-size: 2em;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -122,6 +136,7 @@
 
 .submit-btn {
   padding: 0.5em;
+  margin-bottom: 1rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
   font-size: 1em;
@@ -141,9 +156,6 @@
 }
 
 .form-btn {
-  padding: em;
-  margin-left: 0;
-  margin-right: 0;
   text-align: center;
   margin: 0.5em;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -159,8 +171,6 @@
   font-size: 1em;
   font-weight: bold; 
 }
-
-
 
 .farm-header {
   font-size: 5.0em;
@@ -183,10 +193,12 @@
 }
 
 .farm-name {
-  padding: 0.0em;
-  font-size: 3.5em;
+  font-size: 2.5em;
+  color: black;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #ebfaeb;
 }
 
 .farm-location {
@@ -208,14 +220,20 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* .products-box {
+.products-box {
   border-top: 3px solid;
   color: black;
-} */
+  height: 100%;
+  background-size: cover;
+}
 
 .products-name {
-  padding: 0.0em;
-  font-size: 2em;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 25%;
+  background-color: #ebfaeb;
+  font-size: 2.5em;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -246,6 +264,12 @@
   font-size: 1.5em;
   font-weight: bold;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.products-image {
+  height: 35%;
+  width: 35%;
+  margin-bottom: 1rem
 }
 
 .dropdown {

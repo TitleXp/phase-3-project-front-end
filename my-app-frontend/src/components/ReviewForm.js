@@ -51,7 +51,7 @@ const ReviewForm = ({ setMessage, setReviews, id, review }) => {
     return(
         <div>
             <form className="form" onSubmit={handleSubmit}>
-                <h2 className="form-title">Create your Review</h2>
+                <h2 className="form-title"> &#127822; Create your Review &#127822;</h2>
                 <div>
                     <input className="user-input" type="text" name="name" placeholder='Name:' onChange={handleChange} value={newReview.name} />
                 </div>
