@@ -2,8 +2,8 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import ProductCard from "./ProductCard";
 
-// const ProductContainer = ({products, setProducts}) => {
-const ProductContainer = () => {
+// const VegetableContainer = ({products, setProducts}) => {
+const VegetableContainer = () => {
 
     const [products, setProducts]=useState([])
 
@@ -14,7 +14,7 @@ const ProductContainer = () => {
     useEffect(() => { // fetch products
         const fetchProducts = async () => {
           try {
-            const resp = await fetch("http://localhost:9292/products")
+            const resp = await fetch("http://localhost:9292/vegetables")
             const data = await resp.json()
             setProducts(data)
           } catch (error) {
@@ -48,4 +48,4 @@ const ProductContainer = () => {
 //           </div>
 //           {mappedProducts}
 
-export default ProductContainer;
+export default VegetableContainer;
