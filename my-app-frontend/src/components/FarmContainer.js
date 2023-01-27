@@ -11,12 +11,14 @@ const FarmContainer = ({farms, setFarms, products, setProducts}) => {
     //     <FarmCard {...product} key={product.id} setProducts={setProducts} />
     // ))
 
+
     return (
         <div>
             <h2 className="farm-header"> Discover Our Farms</h2>
                 <div> 
                     {mappedFarms}
                     {/* {mappedProducts} */}
+             
                 </div>
         </div>        
     )

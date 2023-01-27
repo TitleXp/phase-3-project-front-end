@@ -4,14 +4,14 @@ import { useState } from 'react';
 const ReviewForm = ({ setMessage, setReviews }) => {
 
 
-    const [newReviews, setNewReviews] = useState({
+    const [newReview, setNewReview] = useState({
         name: "",
         review: ""
   
     })
 
     const handleChange = (e) => {
-        setNewReviews({...newReviews, [e.target.name]: e.target.value})
+        setNewReview({...newReview, [e.target.name]: e.target.value})
     }
 
     const handleSubmit = (e) => {
@@ -21,13 +21,13 @@ const ReviewForm = ({ setMessage, setReviews }) => {
                 headers:{
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(newReviews)
+                body: JSON.stringify(newReview)
             })
             .then(response => {
                 if(response.status===201){
                     response.json()
                     .then(reviewObj => {
-                        setReviews(currentVal => [reviewObj.name, ...currentVal])
+                        setReviews(currentVal => [reviewObj.review, ...currentVal])
                         setMessage("Review created!")
                     } )
                 
@@ -40,7 +40,7 @@ const ReviewForm = ({ setMessage, setReviews }) => {
             })
            
             .catch(error => alert(error))
-            setNewReviews({
+            setNewReview({
                 name: "",
                 review: ""
             })
@@ -51,11 +51,11 @@ const ReviewForm = ({ setMessage, setReviews }) => {
             <form className="form" onSubmit={handleSubmit}>
                 <h2 className="form-title">Create your Review</h2>
                 <div>
-                    <input className="user-input" type="text" name="name" placeholder='Name:' onChange={handleChange} value={newReviews.name} />
+                    <input className="user-input" type="text" name="name" placeholder='Name:' onChange={handleChange} value={newReview.name} />
                 </div>
 
                 <div>
-                    <input className="user-input" type="text" name="location" placeholder='Review:' onChange={handleChange} value={newReviews.review} />
+                    <input className="user-input" type="text" name="review" placeholder='Review:' onChange={handleChange} value={newReview.review} />
                 </div>
 
                 <input className="submit-btn" type="submit" value="Create Comment" />

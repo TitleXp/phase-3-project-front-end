@@ -13,7 +13,7 @@ const mappedProducts = products.map(product => <ProductCard key={product.id} {..
     return (
         <>
             <div className="farms-box">
-            <Link className="farm-name" to="/farm/id">{name}</Link>
+            <Link className="farm-name" to="/products">{name}</Link>
                 <div className="farm-box">
                 <p className="farm-location">Location: {location}</p>
                 <p className="farm-rating">Rating: {rating}</p>

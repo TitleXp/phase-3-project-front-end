@@ -14,7 +14,9 @@ import ReviewContainer from './ReviewContainer';
 // import Cart from './Cart';
 import Notification from './Notification';
 import ReviewForm from './ReviewForm';
-
+// import ReviewEditForm from './ReviewEditForm';
+import FruitContainer from './FruitContainer';
+import VegetableContainer from './VegetableContainer';
 
 
 function App() {
@@ -52,17 +54,16 @@ function App() {
                 <FarmContainer farms={farms} setFarms={setFarms} />
             </Route>
 
-            <Route path="/farms/id">
-                <ProductContainer />
-              
-            </Route>
-
-            <Route exact path="/fruits"> {/* not working yet */}
+            <Route path="/farms/:id"> {/* not working yet */}
                 <ProductContainer />
             </Route>
 
-            <Route exact path="/vegetables"> {/* not working yet */}
-                <ProductContainer />
+            <Route path="/fruits">
+                <FruitContainer />
+            </Route>
+
+            <Route path="/vegetables"> 
+                <VegetableContainer />
             </Route>
 
             <Route path="/products">
@@ -77,6 +78,8 @@ function App() {
             <Route path="/reviews">
                 <ReviewForm setMessage={setMessage} />
                 <ReviewContainer />
+                {/* <ReviewEditForm /> */}
+                
                 
             </Route>
 
