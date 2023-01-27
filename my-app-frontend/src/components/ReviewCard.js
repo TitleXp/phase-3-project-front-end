@@ -26,11 +26,11 @@ const ReviewCard = ({id, name, review, setReviews}) => {
                 {showForm ? <ReviewEditForm id={id} name={name} review={review} setReviews={setReviews} handleClick={handleClick} />:(
                     <>
                    {name} :{review}
-                <button onClick={handleDeleteReview}> 
+                <button className="form-btn" onClick={handleDeleteReview}> 
                     X
                 </button>
 
-                <button onClick={handleClick}>
+                <button className="form-btn" onClick={handleClick}>
                     Edit
                 </button>  
                 </>
