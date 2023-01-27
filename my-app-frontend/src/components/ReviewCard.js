@@ -27,11 +27,11 @@ const ReviewCard = ({id, name, review, setReviews}) => {
                     <>
                    {name} :{review}
                 <button className="form-btn" onClick={handleDeleteReview}> 
-                    X
+                    DELETE &#10006;
                 </button>
 
                 <button className="form-btn" onClick={handleClick}>
-                    Edit
+                    EDIT &#9999;
                 </button>  
                 </>
                 )}
