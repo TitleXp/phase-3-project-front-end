@@ -26,7 +26,7 @@ const ReviewContainer = ({}) => {
 
     
     return(
-        <div>Review Container
+        <div>
             {mappedReview}
         </div>
     )

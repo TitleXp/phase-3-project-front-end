@@ -49,9 +49,9 @@ const ReviewEditForm = ({ id, name, review, setReviews, handleClick}) => {
 
     return(
         <form onSubmit={handleEditReview}>
-            <input placeholder="Name" type="text" name="name" value={editReview.name} onChange={handleChange} /> 
-            <input placeholder="Review" type="text" name="review" value={editReview.review} onChange={handleChange} /> 
-            <input type="submit" value="Update!" />
+            <input className="user-input" placeholder="Name" type="text" name="name" value={editReview.name} onChange={handleChange} /> 
+            <input className="user-input" placeholder="Review" type="text" name="review" value={editReview.review} onChange={handleChange} /> 
+            <input className="rev-btn" type="submit" value="Update!" />
         
 
         </form>
