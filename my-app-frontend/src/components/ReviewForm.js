@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ReviewForm = ({ setMessage, setReviews }) => {
+const ReviewForm = ({ setMessage, setReviews, id, review }) => {
 
 
     const [newReview, setNewReview] = useState({
@@ -13,6 +13,8 @@ const ReviewForm = ({ setMessage, setReviews }) => {
     const handleChange = (e) => {
         setNewReview({...newReview, [e.target.name]: e.target.value})
     }
+
+    
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -26,8 +28,8 @@ const ReviewForm = ({ setMessage, setReviews }) => {
             .then(response => {
                 if(response.status===201){
                     response.json()
-                    .then(reviewObj => {
-                        setReviews(currentVal => [reviewObj.review, ...currentVal])
+                    .then(review => {
+                        setReviews(currentReviews => [...currentReviews, newReview])
                         setMessage("Review created!")
                     } )
                 

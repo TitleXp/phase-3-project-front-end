@@ -23,7 +23,8 @@ function App() {
 
   const [farms, setFarms]=useState([])
   const [message, setMessage]= useState("")
-  // const [reviews, setReviews]= useState([])
+
+  const [reviews, setReviews]= useState([])
   // const [products, setProducts]=useState([])
 
   useEffect(() => { // fetch farms
@@ -38,6 +39,19 @@ function App() {
     }
     fetchFarms()
   }, [])
+
+  useEffect(() => { // fetch reviews
+    const fetchReviews = async () => {
+      try {
+        const resp = await fetch("http://localhost:9292/reviews")
+        const data = await resp.json()
+        setReviews(data)
+      } catch (error) {
+        alert(error)
+      }
+    }
+    fetchReviews()
+}, [])
 
   return (
 
@@ -76,8 +90,8 @@ function App() {
             </Route>
 
             <Route path="/reviews">
-                <ReviewForm setMessage={setMessage} />
-                <ReviewContainer />
+                <ReviewForm setMessage={setMessage} setReviews={setReviews} />
+                <ReviewContainer setMessage={setMessage} reviews={reviews} setReviews={setReviews} />
                 {/* <ReviewEditForm /> */}
                 
                 
@@ -90,25 +104,5 @@ function App() {
 }
 
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
