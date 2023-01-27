@@ -14,6 +14,8 @@ const ReviewForm = ({ setMessage, setReviews, id, review }) => {
         setNewReview({...newReview, [e.target.name]: e.target.value})
     }
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
             fetch("http://localhost:9292/reviews", {
@@ -27,13 +29,7 @@ const ReviewForm = ({ setMessage, setReviews, id, review }) => {
                 if(response.status===201){
                     response.json()
                     .then(review => {
-                        setReviews(currentReviews => {
-                            const updatedReviews = currentReviews.map(rev =>{
-                                return rev.id === id ? review :rev
-                            
-                            })
-                            return updatedReviews
-                        })
+                        setReviews(currentReviews => [...currentReviews, newReview])
                         setMessage("Review created!")
                     } )
                 
