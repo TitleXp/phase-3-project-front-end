@@ -16,11 +16,11 @@ const Navbar= () =>{
 
       {/* </li> */}
       
-        <div class="dropdown">
+        <div className="dropdown">
            <NavLink activeStyle={{ color: "green" }} to="/products" className="nav-link">Our Products</NavLink>
-              <div class="dropdown-content">
-                <a><Link to="/fruits" className="nav-link">Fruits</Link></a>
-                <a><Link to="/vegetables" className="nav-link">Vegetables</Link></a>
+              <div className="dropdown-content">
+                <div><Link to="/fruits" className="nav-link">Fruits</Link></div>
+                <div><Link to="/vegetables" className="nav-link">Vegetables</Link></div>
               </div>
         </div>  
       

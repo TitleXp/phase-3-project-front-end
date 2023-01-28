@@ -66,6 +66,7 @@ function App() {
         
             <Route path="/farms">
                 <FarmContainer farms={farms} setFarms={setFarms} />
+                <FarmForm setFarms={setFarms} setMessage={setMessage}/>
             </Route>
 
             <Route path="/farms/:id"> {/* not working yet */}
@@ -84,16 +85,14 @@ function App() {
                 <ProductContainer />
             </Route>
 
-            <Route path="/newfarm">
+            {/* <Route path="/newfarm">
                 <FarmForm setFarms={setFarms} setMessage={setMessage}/>
-
-            </Route>
+            </Route> */}
 
             <Route path="/reviews">
                 <ReviewForm setMessage={setMessage} setReviews={setReviews} />
                 <ReviewContainer setMessage={setMessage} reviews={reviews} setReviews={setReviews} />
                 {/* <ReviewEditForm /> */}
-                
                 
             </Route>
 

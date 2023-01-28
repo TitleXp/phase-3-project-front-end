@@ -15,6 +15,8 @@ const FarmForm = ({ setFarms, setMessage }) => {
         setNewFarm({...newFarm, [e.target.name]: e.target.value})
     }
 
+    
+
     const handleSubmit = (e) => {
         e.preventDefault()
             fetch("http://localhost:9292/farms", {
@@ -28,10 +30,10 @@ const FarmForm = ({ setFarms, setMessage }) => {
                 if(response.status===201){
                     response.json()
                     .then(newFarmObj => {
-                        setFarms(currentVal => [newFarmObj.farm,currentVal])
-                        setMessage("Farm created!")
+                        setFarms(currentVal => [...currentVal, newFarm])
+                        // setMessage("Farm created!")
                     } )
-                
+                // debugger
                 } else {
                     response.json()
                     .then(messageObj => setMessage(messageObj.message))
@@ -61,7 +63,7 @@ const FarmForm = ({ setFarms, setMessage }) => {
                 </div>
 
                 <div>
-                    <input className="user-input" type="number" name="rating" placeholder='Rating:' onChange={handleChange} value={newFarm.rating} required/>
+                    <input min={1} max={5} className="user-input" type="number" name="rating" placeholder='Rating:' onChange={handleChange} value={newFarm.rating} required/>
                 </div>
 
                 <input className="submit-btn" type="submit" value="Create New Farm" />
