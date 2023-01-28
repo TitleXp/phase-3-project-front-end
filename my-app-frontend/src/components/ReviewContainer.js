@@ -33,7 +33,7 @@ const ReviewContainer = ({ setMessage, reviews, setReviews }) => {
 
     
     return(
-        <div>
+        <div className="ReviewContainer">
             {mappedReview}
             {/* {mappedRev} */}
             {/* <ReviewForm setMessage={setMessage} id={id} review={reviews} setReviews={setReviews}/> */}

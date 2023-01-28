@@ -22,18 +22,22 @@ const ReviewCard = ({id, name, review, setReviews}) => {
 
     
     return(
-            <div>
+            <div className="reviewBox">
                 {showForm ? <ReviewEditForm id={id} name={name} review={review} setReviews={setReviews} handleClick={handleClick} />:(
-                    <>
-                   {name} :{review}
-                <button className="form-btn" onClick={handleDeleteReview}> 
-                    DELETE &#10006;
-                </button>
-
-                <button className="form-btn" onClick={handleClick}>
-                    EDIT &#9999;
-                </button>  
-                </>
+                    <div className="reviewCard">
+                     {name} :
+                     {review}
+                        {/* <div>    */}
+                            <button className="form-btn" onClick={handleDeleteReview}> 
+                                DELETE &#10006;
+                            </button>
+                        {/* </div>
+                        <div> */}
+                            <button className="form-btn" onClick={handleClick}>
+                                EDIT &#9999;
+                            </button>  
+                        {/* </div> */}
+                    </div>
                 )}
             </div>
     )

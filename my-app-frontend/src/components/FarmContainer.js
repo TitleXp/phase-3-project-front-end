@@ -12,11 +12,14 @@ const FarmContainer = ({farms, setFarms, products, setProducts}) => {
     // ))
 
 
+    
+
     return (
         <div>
             <h2 className="farm-header"> Discover Our Farms</h2>
                 <div> 
                     {mappedFarms}
+                    
                     {/* {mappedProducts} */}
              
                 </div>
