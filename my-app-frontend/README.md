@@ -72,3 +72,19 @@ type
  # Now this should direct you to our homepage!
 
  ![](https://github.com/TitleXp/phase-3-project-front-end/blob/main/images%20and%20gifs/homepage.PNG?raw=true)
+
+
+ Welcome! If you click on "See Our Farms" it should redirect you to the farms page
+
+ ![](https://github.com/TitleXp/phase-3-project-front-end/blob/main/images%20and%20gifs/farm%20form%20and%20farm%20container.PNG?raw=true)
+
+There's a form where you can also create your own farm!
+
+If you head on over to "Products" you'll see us showcasing fresh organic produces offer by the farms.
+
+![](https://github.com/TitleXp/phase-3-project-front-end/blob/main/images%20and%20gifs/product%20page.PNG?raw=true)
+
+If you'd like you can also leave a review on the product/farm!
+
+![](https://github.com/TitleXp/phase-3-project-front-end/blob/main/images%20and%20gifs/review%20form%20and%20review%20container.PNG?raw=true)
+
